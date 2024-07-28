@@ -1,0 +1,41 @@
+POST http://localhost:3000/api/admin/registro
+Content-Type: application/json
+Authorization: aalalal
+
+{
+    "nombre":"Leslie",
+    "apellido": "Araujo",
+    "email": "leslie@gmail.com",
+    "password": "123456",
+    "rol":"administrador"
+}
+
+###
+POST http://localhost:3000/api/ingreso
+Content-Type: application/json
+
+{
+    "email": "nubia@hotmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:3000/api/admin/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjY5OWYwMmNkOGI1NzJiMTMxN2UwMWQyIiwidXNlcl9yb2xlIjoiYWRtaW5pc3RyYWRvciIsImlhdCI6MTcyMTYzOTQxMSwiZXhwIjoxNzIxNjQzMDExfQ.P7KUf9P7Efh9Lm1GrSeO4xdZUwted4QSBfM4EZ0tuvU
+
+
+###
+GET http://localhost:3000/api/usuarios/6699f02cd8b572b1317e01d2
+
+###
+PUT http://localhost:3000/api/usuarios/6699f02cd8b572b1317e01d2
+Content-Type: application/json
+
+{
+    "nombre":"Leslie",
+    "apellido": "Araujo",
+    "rol":"operador"
+}
+
+###
+DELETE http://localhost:3000/api/admin/6699f02cd8b572b1317e01d2

@@ -1,0 +1,26 @@
+.profile-container {
+    max-width: 600px;
+    margin: 150px auto;
+  }
+  
+  .card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: #007bff;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .user-details p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  

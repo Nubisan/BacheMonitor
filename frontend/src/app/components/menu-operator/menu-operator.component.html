@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="data_table">
+                <div class="table_header">
+                    <h2>Reporte</h2>
+                    <button (click)="exportExcel()" class="btn btn-primary mb-3">Descargar en Excel</button>
+                </div>
+           
+                <table  id="tabla" class="table table-striped table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>X</th>
+                            <th>Y</th>
+                            <th>Z</th>
+                            <th>Latitud</th>
+                            <th>Longitud</th>
+                            <th>Fecha y Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of sensorData">
+                            <td>{{ data.x }}</td>
+                            <td>{{ data.y }}</td>
+                            <td>{{ data.z }}</td>
+                            <td>{{ data.lat }}</td>
+                            <td>{{ data.lng }}</td>
+                            <td>{{ data.time }}</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>X</th>
+                            <th>Y</th>
+                            <th>Z</th>
+                            <th>Latitud</th>
+                            <th>Longitud</th>
+                            <th>Fecha y Hora</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>   
+        </div>
+    </div>
+</div>
+
+
+

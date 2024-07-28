@@ -1,0 +1,16 @@
+.inner-row{
+    height: 100vh;
+}
+
+.primaryBg{
+    background: rgba(141,194,111,1);
+}
+
+.primaryColor{
+    color: rgba(141,194,111,1);
+}
+
+.form-box{
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2), 0 5px 5px 0 rgba(0,0,0,0.24);
+}

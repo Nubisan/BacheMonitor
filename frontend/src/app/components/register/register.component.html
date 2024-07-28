@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center inner-row">
+        <div class="col-md-5">
+            <div class="form-box p-5">
+                <div class="form-title">
+                    <h2 class="fw-bold mb-3">{{ userId() ? 'Editar Cuenta' : 'Crear Cuenta' }}</h2>
+                </div>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control form-control-sm" formControlName="nombre" placeholder="Nombre" id="floatingNombre">
+                        <label for="floatingNombre">Nombre</label>
+                        <div class="text-danger" *ngIf="formSubmitted && registerForm.controls['nombre'].errors">
+                            <span *ngIf="registerForm.controls['nombre'].errors['required']">El nombre <strong>es obligatorio</strong></span>
+                            <span *ngIf="registerForm.controls['nombre'].errors['pattern']">El nombre <strong>solo debe contener letras y espacios</strong></span>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control form-control-sm" formControlName="apellido" placeholder="Apellido" id="floatingApellido">
+                        <label for="floatingApellido">Apellido</label>
+                        <div class="text-danger" *ngIf="formSubmitted && registerForm.controls['apellido'].errors">
+                            <span *ngIf="registerForm.controls['apellido'].errors['required']">El apellido <strong>es obligatorio</strong></span>
+                            <span *ngIf="registerForm.controls['apellido'].errors['pattern']">El apellido <strong>solo debe contener letras y espacios</strong></span>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control form-control-sm" formControlName="email" placeholder="nombre@ups.edu.ec" id="floatingEmail">
+                        <label for="floatingEmail">Email</label>
+                        <div class="text-danger" *ngIf="formSubmitted && registerForm.controls['email'].errors">
+                            <span *ngIf="registerForm.controls['email'].errors['required']">El correo <strong>es obligatorio</strong></span>
+                            <span *ngIf="registerForm.controls['email'].errors['email']">El correo <strong>no es válido</strong></span>
+                            <span *ngIf="registerForm.controls['email'].errors['pattern']">El correo debe tener el dominio <strong>ups.edu.ec</strong></span>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control form-control-sm" formControlName="password" placeholder="Debe contener mínimo 6 carateres entre números y letras" id="floatingContra">
+                        <label for="floatingContra">Contraseña</label>
+                        <div class="text-danger" *ngIf="formSubmitted && registerForm.controls['password'].errors">
+                            <span *ngIf="registerForm.controls['password'].errors['required']">La Contraseña <strong>es obligatoria</strong></span>
+                            <span *ngIf="registerForm.controls['password'].errors['minlength']">La Contraseña debe tener al menos 6 caracteres</span>
+                            <span *ngIf="registerForm.controls['password'].errors['pattern']">La Contraseña debe tener al menos 6 caracteres y contener letras y números</span>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select class="form-control form-control-sm" formControlName="role" id="floatingRol">
+                            <option value="" disabled selected>Seleccione un rol</option>
+                            <option value="administrador">Administrador</option>
+                            <option value="operador">Operador</option>
+                        </select>
+                        <label for="floatingRol">Rol</label>
+                        <div class="text-danger" *ngIf="formSubmitted && registerForm.controls['role'].errors">
+                            <span>El rol <strong>es obligatorio</strong></span>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <button type="submit" class="btn primaryBg text-white btn-lg mx-5"> {{ userId() ? 'Guardar cambios' : 'Crear cuenta' }}</button>
+                        <button class="btn primaryBg text-white btn-lg" routerLink="/menuAdmin">Volver</button>
+                        <div class="text-danger error" *ngIf="formSubmitted && registerForm.invalid">
+                            <span>El formulario contiene errores. Por favor, revíselos.</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
