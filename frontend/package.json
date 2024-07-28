@@ -26,7 +26,7 @@
     "express": "^4.18.2",
     "leaflet": "^1.9.4",
     "ngx-toastr": "^19.0.0",
-    "nominatim-browser": "^2.1.0",
+    "nominatim-browser": "^1.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "undici": "^6.19.4",

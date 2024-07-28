@@ -6,7 +6,8 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
+  styleUrl: './menu.component.css',
+  host: { '[attr.id]': "'menu-component-id'" } 
 })
 export class MenuComponent implements OnInit, OnDestroy {
 

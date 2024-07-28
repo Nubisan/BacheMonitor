@@ -7,7 +7,8 @@ import { AdminService } from '../../services/admin.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  host: { '[attr.id]': "'register-component-id'" } 
 })
 export class RegisterComponent {
 

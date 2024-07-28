@@ -9,7 +9,7 @@ import { AuthService } from './services/auth.service';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { SensorDataService } from './services/sensor-data.service';
 // import { SensorDataComponent } from './components/sensor-data/sensor-data.component';
-
+import {SensordataComponent} from './components/sensordata/sensordata.component'
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'editUser/:userId', component: RegisterComponent, canActivate: [AuthService] },
   { path: 'menuOperator', component: MenuOperatorComponent, canActivate: [AuthService] },
   { path: 'perfil', component: PerfilComponent, canActivate: [AuthService] },
-  // { path: 'reporte', component: SensorDataComponent },
+   { path: 'reporte', component: SensordataComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 

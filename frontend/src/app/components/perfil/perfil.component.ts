@@ -5,7 +5,8 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
-  styleUrls: ['./perfil.component.css']
+  styleUrls: ['./perfil.component.css'],
+  host: { '[attr.id]': "'perfil-component-id'" } 
 })
 export class PerfilComponent implements OnInit {
   

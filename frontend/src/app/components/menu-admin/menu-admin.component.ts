@@ -5,7 +5,8 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-menu-admin',
   templateUrl: './menu-admin.component.html',
-  styleUrl: './menu-admin.component.css'
+  styleUrl: './menu-admin.component.css',
+  host: { '[attr.id]': "'menuAdmin-component-id'" } 
 })
 export class MenuAdminComponent implements OnInit{
 

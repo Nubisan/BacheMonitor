@@ -13,10 +13,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import { authInterceptor } from './interceptors/auth.interceptor';
 import { PerfilComponent } from './components/perfil/perfil.component';
 // import { SensorDataComponent } from './components/sensor-data/sensor-data.component';
-
+import {SensordataComponent} from './components/sensordata/sensordata.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,11 +37,14 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    SensordataComponent
+    
     // SensorDataComponent
   ],
   providers: [
     provideClientHydration(),
+    provideHttpClient(withFetch()),
     { provide: HTTP_INTERCEPTORS, useClass: authInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]

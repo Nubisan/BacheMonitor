@@ -7,7 +7,8 @@ declare var google: any;
 @Component({
   selector: 'app-menu-operator',
   templateUrl: './menu-operator.component.html',
-  styleUrls: ['./menu-operator.component.css']
+  styleUrls: ['./menu-operator.component.css'],
+  host: { '[attr.id]': "'menuOperador-component-id'" } 
 })
 export class MenuOperatorComponent implements OnInit { 
 
