@@ -134,6 +134,14 @@ video{
     letter-spacing: 2px;
 }
 
+.overlay ol {
+    padding-bottom: 150px;
+}
+
+.overlay p {
+    padding-bottom: 150px;
+}
+
 .box:hover img{
     transform: scale(1.2);
 }

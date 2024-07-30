@@ -31,7 +31,7 @@
                             <span *ngIf="registerForm.controls['email'].errors['pattern']">El correo debe tener el dominio <strong>ups.edu.ec</strong></span>
                         </div>
                     </div>
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-3 ">
                         <input type="password" class="form-control form-control-sm" formControlName="password" placeholder="Debe contener mínimo 6 carateres entre números y letras" id="floatingContra">
                         <label for="floatingContra">Contraseña</label>
                         <div class="text-danger" *ngIf="formSubmitted && registerForm.controls['password'].errors">

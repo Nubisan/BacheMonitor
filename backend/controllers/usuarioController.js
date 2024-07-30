@@ -39,10 +39,10 @@ usersController.addUser = async(req, res) =>
     await newUser.save();// .save() metodo asincrono toma tiempo para gardarse para poder continuar con otras tareas agregar await y en la funcion async
     
     //Se envía como estado “OK” o estado 200. Y se imprime el token 
-    res.status(200);
+    res.status(200).json(newUser);
 
     //Se imprime en consola los datos enviados en el JSON 
-    console.log(newUser);
+    //console.log(newUser);
         
     } catch (error) {
         console.error(error);

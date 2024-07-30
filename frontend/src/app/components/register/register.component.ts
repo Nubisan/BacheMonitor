@@ -17,6 +17,7 @@ export class RegisterComponent {
   activateRoute = inject(ActivatedRoute);
   adminService = inject(AdminService);
   userId = signal('');
+  existingPassword: string = '';
 
   constructor(private router: Router, private toastr: ToastrService) {
     this.registerForm = new FormGroup({
@@ -45,23 +46,29 @@ export class RegisterComponent {
     if (this.registerForm.invalid) {
       this.formSubmitted = true;
       return;
-    } else {
-      this.adminService.register(this.registerForm.value).subscribe(
-        response => {
-          this.toastr.success('El usuario fue registrado con éxito', 'Usuario Registrado');
-          console.log(response); // Aquí se muestra la respuesta del backend
-          this.router.navigate(['/menuAdmin']);
-        },
-        error => {
-          console.error(error);
-          this.toastr.error('Hubo un error en el registro', 'Error');
-        }
-      );
-    }
+    } 
+
+    this.adminService.register(this.registerForm.value).subscribe(
+      response => {
+        this.toastr.success('El usuario fue registrado con éxito', 'Usuario Registrado');
+        console.log(response); // Aquí se muestra la respuesta del backend
+        this.router.navigate(['/menuAdmin']);
+      },
+      error => {
+        console.error(error);
+        this.toastr.error('Hubo un error en el registro', 'Error');
+      }
+    );
   }
 
   async editarUsuario() {
+
     try {
+      const formValue = this.registerForm.value;
+      // Mantener la contraseña existente si el campo está vacío
+      if (formValue.password === '') {
+        formValue.password = this.existingPassword;
+      }
       const response = await this.adminService.update(this.userId(), this.registerForm.value);
       this.toastr.success('El usuario fue actualizado con éxito', 'Usuario Actualizado');
       this.router.navigate(['/menuAdmin']);
@@ -77,12 +84,17 @@ export class RegisterComponent {
       const user = await this.adminService.getById(userId);
       console.log(user);
 
+      // Guardar la contraseña existente
+      this.existingPassword = user.password;
+
       //Rellenar el formulario
       delete user._id;
       delete user.__v;
       delete user.createdAt;
       delete user.updatedAt;
       this.registerForm.setValue(user);
+       // la mantendrá vacía durante la edición
+       this.registerForm.get('password')?.setValue('');
     })
   }
 }

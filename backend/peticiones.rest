@@ -1,13 +1,12 @@
 POST http://localhost:3000/api/admin/registro
 Content-Type: application/json
-Authorization: aalalal
 
 {
-    "nombre":"Leslie",
-    "apellido": "Araujo",
-    "email": "leslie@gmail.com",
+    "nombre":"Lulu",
+    "apellido": "Asencio",
+    "email": "lulu@gmail.com",
     "password": "123456",
-    "rol":"administrador"
+    "role":"operador"
 }
 
 ###
