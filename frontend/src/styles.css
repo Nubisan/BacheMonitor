@@ -1,8 +1,29 @@
 @import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
 /* You can add global styles to this file, and also import other style files */
-body{
-    background: #ECE9E6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    font-family: bebas neue;
+
+
+:root {
+    --background-color: white;
+    --text-color: black;
 }
+  
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    /* font-family: bebas neue; */
+}
+  
+body.dark-theme {
+    --background-color: #333;
+}
+  
+body.high-contrast-theme {
+    --background-color: black;
+    --text-color: yellow;
+}
+
+button:focus, a:focus {
+    outline: 2px solid black; /* Hacer el foco visible */
+}
+
+  

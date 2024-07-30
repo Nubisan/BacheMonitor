@@ -3,12 +3,13 @@
 }
 
 .primaryBg{
-    background: rgba(141,194,111,1);
+    background: #FFD700;
 }
 
-.primaryColor{
-    color: rgba(141,194,111,1);
+.primaryBg:hover{
+    background: #000;
 }
+
 
 .form-box{
     background: #fff;

@@ -8,18 +8,19 @@ import { MenuOperatorComponent } from './components/menu-operator/menu-operator.
 import { AuthService } from './services/auth.service';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { SensorDataService } from './services/sensor-data.service';
-// import { SensorDataComponent } from './components/sensor-data/sensor-data.component';
 import {SensordataComponent} from './components/sensordata/sensordata.component'
+import { MapaComponent } from './components/mapa/mapa.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
+  { path: 'mapa', component: MapaComponent },
+  { path: 'register', component: RegisterComponent, canActivate: [AuthService] },
   { path: 'home', component: HomeComponent },
   { path: 'menuAdmin', component: MenuAdminComponent, canActivate: [AuthService] },
   { path: 'editUser/:userId', component: RegisterComponent, canActivate: [AuthService] },
   { path: 'menuOperator', component: MenuOperatorComponent, canActivate: [AuthService] },
   { path: 'perfil', component: PerfilComponent, canActivate: [AuthService] },
-   { path: 'reporte', component: SensordataComponent },
+  { path: 'dashboard', component: SensordataComponent, canActivate: [AuthService] },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 

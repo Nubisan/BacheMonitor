@@ -1,0 +1,13 @@
+<div class="dropdown" aria-label="Botón para accesibilidad">
+  <button (click)="toggleDropdown()" class="dropdown-toggle">Accesibilidad</button>
+  <div *ngIf="isOpen" class="dropdown-menu">
+    <h4>Accesibilidad</h4>
+    <div>
+      <button (click)="setTheme('default')" aria-label="Botón para tema predeterminado">Tema Predeterminado</button>
+      <button (click)="setTheme('dark')" aria-label="Botón para tema oscuro">Tema Oscuro</button>
+      <button (click)="setTheme('high-contrast')" aria-label="Botón para alto contraste">Alto Contraste</button>
+    </div>
+  </div>
+</div>
+
+  

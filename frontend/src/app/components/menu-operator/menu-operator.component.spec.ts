@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MenuOperatorComponent } from './menu-operator.component';
 
 describe('MenuOperatorComponent', () => {

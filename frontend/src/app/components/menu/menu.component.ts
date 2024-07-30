@@ -13,6 +13,7 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   authService = inject(AuthService);
   role: string | null = null;
+  router = inject(Router);
 
   private authSubscription!: Subscription;
 

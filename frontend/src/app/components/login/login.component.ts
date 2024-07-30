@@ -34,6 +34,11 @@ export class LoginComponent {
         console.log('Respuesta del servidor:', response);
         const { token, role, user_id } = response;
         this.authService.setToken(token, role, user_id);
+        if(this.authService.getRole() === 'operador'){
+          this.router.navigate(['/menuOperator']);
+        } else {
+          this.router.navigate(['/menuAdmin']);
+        }
       },
       error => {
         this.errorMessage = error.error.message;

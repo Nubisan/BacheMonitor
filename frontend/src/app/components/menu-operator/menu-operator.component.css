@@ -14,10 +14,10 @@
     padding: 20px 30px 0;
 }
 
-#btn{
+.btn{
     outline: none;
     border: none;
-    background-color: rgba(141,194,111,1);
+    background-color: #ffd700;
     color: #fff;
     padding: 10px 30px;
     border-radius: 20px;
@@ -26,6 +26,7 @@
     cursor: pointer;
 
     &:hover{
-        background-color: rgba(118,184,82,1);
+        background-color: #000;
     }
 }
+

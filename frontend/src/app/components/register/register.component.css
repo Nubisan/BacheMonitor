@@ -1,10 +1,14 @@
 .inner-row{
-    margin-top: 40px;
+    margin-top: 100px;
     height: 100vh;
 }
 
 .primaryBg{
-    background: rgba(141,194,111,1);
+    background: #FFD700;
+}
+
+.primaryBg:hover{
+    background: #000;
 }
 
 .form-box{

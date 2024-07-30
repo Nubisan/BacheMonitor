@@ -32,9 +32,11 @@ export class MenuAdminComponent implements OnInit{
     const user = await this.adminService.deleteById(userId);
     console.log(user);
 
-    if(!user.error && confirm('Estas seguro de eliminar este usuario?')){
-      this.adminService.getAll();
-      this.toastr.success('El usuario fue eliminado con con éxito', 'Usuario Eliminado');
+    if(!user.error){
+      if(confirm('Estas seguro de eliminar este usuario?')){
+        this.adminService.getAll();
+        this.toastr.success('El usuario fue eliminado con con éxito', 'Usuario Eliminado');
+      }
     } else {
       console.log(user.error);
       this.toastr.error('Hubo un error al eliminar el usuario', 'Error');

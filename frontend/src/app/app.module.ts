@@ -17,7 +17,9 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { authInterceptor } from './interceptors/auth.interceptor';
 import { PerfilComponent } from './components/perfil/perfil.component';
 // import { SensorDataComponent } from './components/sensor-data/sensor-data.component';
-import {SensordataComponent} from './components/sensordata/sensordata.component'
+import {SensordataComponent} from './components/sensordata/sensordata.component';
+import { FloatingWindowComponent } from './components/floating-window/floating-window.component';
+import { MapaComponent } from './components/mapa/mapa.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +29,8 @@ import {SensordataComponent} from './components/sensordata/sensordata.component'
     MenuComponent,
     MenuAdminComponent,
     MenuOperatorComponent,
-    PerfilComponent
-    
+    PerfilComponent,
+    FloatingWindowComponent 
   ],
   imports: [
     BrowserModule,
@@ -38,9 +40,8 @@ import {SensordataComponent} from './components/sensordata/sensordata.component'
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
-    SensordataComponent
-    
-    // SensorDataComponent
+    SensordataComponent,
+    MapaComponent
   ],
   providers: [
     provideClientHydration(),

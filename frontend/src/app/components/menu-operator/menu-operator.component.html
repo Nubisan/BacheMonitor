@@ -4,11 +4,14 @@
             <div class="data_table">
                 <div class="table_header">
                     <h2>Reporte</h2>
-                    <button (click)="exportExcel()" class="btn btn-primary mb-3">Descargar en Excel</button>
+                    <div class="botones">
+                        <button (click)="exportExcel()" class="btn mb-3">Descargar en Excel</button>
+                        <button (click)="exportPDF()" class="btn mb-3 mx-3">Descargar en PDF</button>
+                    </div>
                 </div>
            
                 <table  id="tabla" class="table table-striped table-bordered">
-                    <thead class="table-dark">
+                    <thead class="table-dark text-center">
                         <tr>
                             <th>X</th>
                             <th>Y</th>
@@ -28,7 +31,7 @@
                             <td>{{ data.time }}</td>
                         </tr>
                     </tbody>
-                    <tfoot>
+                    <tfoot class="text-center">
                         <tr>
                             <th>X</th>
                             <th>Y</th>
