@@ -21,6 +21,7 @@ export class MenuOperatorComponent implements OnInit {
   
   ngOnInit(): void {
     this.fetchSensorData();
+    console.log(this.sensorData);
     (pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
   }
   
@@ -28,6 +29,7 @@ export class MenuOperatorComponent implements OnInit {
   fetchSensorData() {
     this.sensorDataService.getSensorData().subscribe(data => {
       this.sensorData = data;
+      
     });
   }
 
@@ -61,7 +63,7 @@ export class MenuOperatorComponent implements OnInit {
                 { text: 'Logitud', style: 'tableHeader' },
                 { text: 'Fecha y Hora', style: 'tableHeader' }
               ],
-              ...this.sensorData.map(datos => [datos.x, datos.y, datos.z, datos.lat, datos.lng, datos.time])
+              ...this.sensorData.map(datos => [datos.x, datos.y, datos.z, datos.lat, datos.lng, datos.fecha_hora])
             ]
           }
         }
