@@ -50,6 +50,68 @@
     </div>
 </section>
 
+<section id="carousel">
+    <div class="container">
+        <h4>Sobre Sensores</h4>
+        <div id="slider" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators visually-hidden">
+                <li data-bs-target="#slider" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#slider" data-bs-slide-to="1"></li>
+                <li data-bs-target="#slider" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div>
+                                <h3>Conexión de los Sensores</h3>
+                                <p>En la imagen se observa la placa de desarrollo ESP32 conectada a una protoboard junto con dos sensores: el MPU6050 (sensor de movimiento) y el módulo NEO-6M (sensor GPS). Los datos capturados por estos sensores son enviados al servidor a través del ESP32, donde se almacenan en una base de datos.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <img src="../assets/prototipo.png" alt="Prototipo ensamblado">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div>
+                                <h3>Funcionamiento de los Sensores</h3>
+                                <p>Se puede observar cómo los sensores MPU6050 y NEO-6M están encendidos y operando correctamente. El ESP32, conectado a ambos sensores, recibe y procesa los datos en tiempo real. La funcionalidad de los sensores se confirma al ver cómo envían información continuamente al servidor.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <img src="../assets/conexion.jpeg" alt="Sensores MPU6050 y NEO-6M están encendidos y operando correctamente">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div>
+                                <h3>Detección de Bache</h3>
+                                <p>Se muestra cómo el sensor de movimiento MPU6050 detecta y registra movimientos. Los datos generados por el sensor son enviados en tiempo real al servidor, donde se procesan y almacenan en la base de datos. A medida que el sensor detecta cambios, estos se reflejan instantáneamente en un gráfico en pantalla, proporcionando una visualización dinámica y en tiempo real de los movimientos capturados.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <img src="../assets/grafica.png" alt="Grafica con los valores del sensor MPU6050">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#slider" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#slider" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+
 <footer class="bg-dark text-white pt-5 pb-5">
     <div class="container">
         <div class="row text-center text-md-left">
@@ -65,7 +127,7 @@
 
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h5 class="mb-4 font-weight-bold text-warning">CREADORES</h5>
-                <p>Francisco Lopez</p>
+                <p>Francisco López</p>
                 <p>Nicol Constante</p>
                 <p>Nubia Araujo</p>
             </div>

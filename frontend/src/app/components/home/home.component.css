@@ -134,18 +134,40 @@ video{
     letter-spacing: 2px;
 }
 
-.overlay ol {
-    padding-bottom: 150px;
-}
-
-.overlay p {
-    padding-bottom: 150px;
-}
-
 .box:hover img{
     transform: scale(1.2);
 }
 
 .box:hover .overlay{
     height: 100%;
+}
+
+.col-sm-4 div{
+    padding: 50px;
+
+    h3{
+        border-bottom: 1px solid #000;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+
+    p{
+        text-align: justify;
+    }
+}
+
+#carousel{
+   padding: 60px 0;
+
+   #slider{
+    margin-top: 10px;
+   }
+}
+
+
+.carousel-item .col-sm-8 img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Puedes ajustar esta altura según tus necesidades */
+    object-fit: cover;
 }
