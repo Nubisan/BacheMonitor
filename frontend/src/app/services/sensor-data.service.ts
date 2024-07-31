@@ -16,7 +16,7 @@ export interface SensorData {
   providedIn: 'root'
 })
 export class SensorDataService {
-  private apiUrl = 'http://localhost:8000/get'; // URL de la API
+  private apiUrl = 'http://35.175.228.149:8000/get'; // URL de la API
 
   constructor(private http: HttpClient) {}
 
