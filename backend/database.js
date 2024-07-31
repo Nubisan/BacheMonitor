@@ -1,9 +1,13 @@
 const mongoose = require('mongoose');
 
-const URI = 'mongodb://localhost:27017/bachemonitor';
-mongoose.connect(URI)
+const dbUri = 'mongodb+srv://madelin:aAGjJCDZGC24xuVI@cluster0.saarj2n.mongodb.net/bachemonitor?retryWrites=true&w=majority';
 
-.then(db => console.log('Base de datos conectada'))
-.catch(err => console.log(err));
+mongoose.connect(dbUri)
+  .then(() => {
+    console.log('Conexión a MongoDB Atlas exitosa');
+  })
+  .catch((error) => {
+    console.error('Error conectándose a MongoDB Atlas:', error);
+});
 
 module.exports = mongoose;

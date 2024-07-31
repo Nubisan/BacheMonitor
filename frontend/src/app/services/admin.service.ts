@@ -13,7 +13,7 @@ export class AdminService {
   private router = inject(Router);
 
   constructor() { 
-    this.apiUrl = 'http://localhost:3000/api/admin';
+    this.apiUrl = 'http://35.175.228.149:3000/api/admin';
   }
 
   register(userData: any): Observable<any> {

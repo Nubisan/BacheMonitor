@@ -15,7 +15,7 @@ export class AuthService implements CanActivate{
   authStatusChanged = new Subject<void>();
 
   constructor() {
-    this.apiUrl = 'http://localhost:3000/api';
+    this.apiUrl = 'http://35.175.228.149:3000/api';
   }
 
   login(userData: any): Observable<any> {

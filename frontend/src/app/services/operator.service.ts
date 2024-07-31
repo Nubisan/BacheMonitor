@@ -12,7 +12,7 @@ export class OperatorService {
   private apiUrl: string;
 
   constructor() { 
-    this.apiUrl = 'http://localhost:3000/api/operator';
+    this.apiUrl = 'http://35.175.228.149:3000/api/operator';
   }
 
   getId(): string | null {
